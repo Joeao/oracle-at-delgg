@@ -8,6 +8,7 @@ body {
 
 body img {
     width: 20%;
+    max-width: 150px;
     margin: auto;
     display: flex;
 }
@@ -45,7 +46,7 @@ p {
     display: block;
 }
 
-#tryAgain {
+#noGames, #tryAgain, #resetAll {
     display: none;
 }
 
@@ -88,11 +89,7 @@ textarea {
 }
 
 #prophesise, #resetAll {
-    position: fixed;
+    position: absolute;
     bottom: 10px;
     width: 100%;
-}
-
-#resetAll {
-    display: none;
 }

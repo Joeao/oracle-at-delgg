@@ -6,6 +6,8 @@ const submittedBody = document.getElementById('submittedBody');
 const gameSelector = document.getElementById('gameSelector');
 const resetAll = document.getElementById('resetAll');
 const masterResetButton = document.getElementById('masterResetButton');
+const noGames = document.getElementById('noGames');
+const prophesise = document.getElementById('prophesise');
 
 let lastNumber = 0;
 let highlightedAnswer = false;
@@ -26,10 +28,12 @@ let gameAnimation = () => {
                 }
                 if (highlightedAnswer === false) {
                     highlightedAnswer = true;
+                    gameSelector.style.color = '#010165';
                     gameSelector.style.backgroundColor = '#00ffff';
                     y++;
                 } else {
                     highlightedAnswer = false;
+                    gameSelector.style.color = '#fff';
                     gameSelector.style.backgroundColor = '#010165';
                     y++;
                 };
@@ -55,28 +59,26 @@ const addGames = () => {
     for (i = 0; i < splitText.length; i++) {
         games.push(splitText[i]);
     };
-    if (games.length > 9) {
+    prophesise.style.display = 'none';
+    defaultBody.style.display = 'none';
+    if (games.length === 1) {
+        noGames.style.display = 'block';
+    } else if (games.length > 9) {
         games = [];
-        defaultBody.style.display = 'none';
         tryAgain.style.display = 'block';
     } else {
-        defaultBody.style.display = 'none';
         submittedBody.style.display = 'block';
-        console.log('games.length = ' + games.length);
         gameAnimation();
     }
 };
 
-const tryAgainReset = () => {
+/*const tryAgainReset = () => {
     defaultBody.style.display = 'block';
     tryAgain.style.display = 'none';
+    noGames.style.display = 'none';
+    prophesise.style.display
     games = [];
-};
-
-document.getElementById('reset').addEventListener('click', tryAgainReset);
-
-const prophesise = document.getElementById('prophesise');
-prophesise.addEventListener('click', addGames);
+};*/
 
 const note = document.getElementById('musicNote');
 let isPlaying = false;
@@ -91,12 +93,13 @@ function zeldaPlay() {
         return document.getElementById('fairyFountain').pause();
     }
 };
-note.addEventListener('click', zeldaPlay);
 
 const totalRevert = () => {
     resetAll.style.display = 'none';
     submittedBody.style.display = 'none';
+    noGames.style.display = 'none';
     defaultBody.style.display = 'block';
+    prophesise.style.display = 'block';
     gameSelector.innerHTML = "";
     lastNumber = 0;
     games = [];
@@ -104,4 +107,8 @@ const totalRevert = () => {
     gameSelector.style.backgroundColor = '#010165';
 }
 
+note.addEventListener('click', zeldaPlay);
+document.getElementById('reset1').addEventListener('click', totalRevert);
+document.getElementById('reset2').addEventListener('click', totalRevert);
+prophesise.addEventListener('click', addGames);
 masterResetButton.addEventListener('click', totalRevert);

@@ -1,0 +1,98 @@
+body {
+    background-color: #010165;
+    margin: 0;
+    text-align: center;
+    font-family: 'Press Start 2P', "Comic Sans MS", sans-serif;
+    color: #fff;
+}
+
+body img {
+    width: 20%;
+    margin: auto;
+    display: flex;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 150%;
+    color: #00ffff;
+    margin: 40px 0 20px;
+}
+
+h3 {
+    color: #00ffff;
+    font-size: 20px;
+}
+
+p {
+    line-height: 150%;
+    padding: 0 20px;#
+    margin: 0;
+}
+
+#musicCredit {
+    display: none;
+    margin: 20px 0;
+    font-size: 8px;
+    color: #4612ff;
+}
+
+#oracleBody {
+    padding: 20px 0;
+}
+
+#defaultBody {
+    display: block;
+}
+
+#tryAgain {
+    display: none;
+}
+
+button {
+    margin: 20px 0;
+    background: transparent;
+    color: #00ffff;
+    font-family: 'Press Start 2P', 'Comic Sans MS', sans-serif;
+    font-size: 20px;
+    border: none;
+}
+
+#submittedBody {
+    display: none;
+}
+
+#gameSelector {
+    padding: 30px 0;
+    margin: 50px 0;
+    font-size: 20px;
+}
+
+#oracleBody p {
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+    margin: 20px 0;
+    padding: 10px;
+    width: 70%;
+    font-family: 'Press Start 2P', 'Comic Sans MS', sans-serif;
+    border: none;
+    color: #00ffff;
+    background-color: #0000bd;
+}
+
+#explanation {
+    font-size: 12px;
+}
+
+#prophesise, #resetAll {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
+
+#resetAll {
+    display: none;
+}

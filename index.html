@@ -1,45 +1,48 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>The Oracle At DelGG</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./style.css">
-        <link href="https://fonts.googleapis.com/css?family=Monoton|Press+Start+2P&display=swap" rel="stylesheet">
-        <script src="./oracle.js" async defer></script>
-    </head>
-    <body>
-        <h1>The Oracle At DelGG</h1>
-        <input type="image" id="musicNote" alt="Music" src="./assets/note.png">
-        <a id="musicCredit" href="https://www.youtube.com/watch?v=ANkVKFLMiNw" target="_blank">Music by MattriOST</a>
-        <div id="oracleBody">
-            <div id="defaultBody">
-                <p>Enter your games:</p>
-                <textarea id="gamesInput" name="gamesInput" rows="5"></textarea>
-                <p id="explanation">* Write the games separated by commas and the oracle will choose one for you *</p>
-                <div id="prophesise">
-                    <img src="./assets/crystal-ball-pixels.png">
-                    <h3>Prophesise</h3>
-                </div>
-            </div>
-            <div id="noGames">
-                    <p>You need to add more games!</p>
-                    <button id="reset1">Try Again</button>
-            </div>
-            <div id="tryAgain">
-                <p>Too many games! The oracle can only choose between 10 options.</p>
-                <button id="reset2">Try Again</button>
-            </div>
-            <div id="submittedBody">
-                <div id="gameSelector"></div>
-                <div id="resetAll">
-                    <p>Enjoy the game!</p>
-                    <button id="masterResetButton">Start Over</button>
-                </div>
-            </div>
-            
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Oracle At DelGG</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="./oracle.js" async defer></script>
+</head>
+
+<body>
+    <h1>The Oracle At DelGG</h1>
+    <input type="image" id="musicNote" alt="Music" src="./assets/note.png">
+    <a id="musicCredit" href="https://www.youtube.com/watch?v=ANkVKFLMiNw" target="_blank">Music by MattriOST</a>
+    <div id="oracleBody">
+        <div id="defaultBody">
+            <p>Enter your games:</p>
+            <textarea id="gamesInput" name="gamesInput" rows="5"></textarea>
+            <p id="explanation">* Write the games separated by commas and the oracle will choose one for you *</p>
+
         </div>
-        <audio loop id='fairyFountain' src="./assets/fairy-fountain.mp3"></audio>
-    </body>
+        <div id="noGames">
+            <p>You need to add more games!</p>
+            <button id="reset1">Try Again</button>
+        </div>
+        <div id="tryAgain">
+            <p>Too many games! The oracle can only choose between 10 options.</p>
+            <button id="reset2">Try Again</button>
+        </div>
+        <div id="submittedBody">
+            <div id="gameSelector"></div>
+            <div id="resetAll">
+                <p>Enjoy the game!</p>
+                <button id="masterResetButton">Start Over</button>
+            </div>
+        </div>
+    </div>
+    <div id="prophesise">
+        <img src="./assets/crystal-ball-pixels.png">
+        <button>Prophesise</button>
+    </div>
+    <audio loop id='fairyFountain' src="./assets/fairy-fountain.mp3"></audio>
+</body>
+
 </html>

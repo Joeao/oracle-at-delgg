@@ -4,6 +4,9 @@ body {
     text-align: center;
     font-family: 'Press Start 2P', "Comic Sans MS", sans-serif;
     color: #fff;
+    position: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 body img {
@@ -20,14 +23,9 @@ h1 {
     margin: 40px 0 20px;
 }
 
-h3 {
-    color: #00ffff;
-    font-size: 20px;
-}
-
 p {
     line-height: 150%;
-    padding: 0 20px;#
+    padding: 0 20px;
     margin: 0;
 }
 
@@ -84,12 +82,25 @@ textarea {
     background-color: #0000bd;
 }
 
+textarea:focus {
+    border: 2px #00ffff solid;
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
 #explanation {
     font-size: 12px;
 }
 
 #prophesise, #resetAll {
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     width: 100%;
+}
+
+#prophesise, button, #note {
+    cursor: pointer;
+    margin: 20px 0;
 }

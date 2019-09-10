@@ -105,6 +105,7 @@ const totalRevert = () => {
     games = [];
     highlightedAnswer = false;
     gameSelector.style.backgroundColor = '#010165';
+    gameSelector.style.color = '#fff';
 }
 
 note.addEventListener('click', zeldaPlay);

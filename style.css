@@ -83,7 +83,7 @@ textarea {
 }
 
 textarea:focus {
-    border: 2px #00ffff solid;
+    outline: 2px #00ffff solid;
 }
 
 input:focus, button:focus {
@@ -95,12 +95,28 @@ input:focus, button:focus {
 }
 
 #prophesise, #resetAll {
-    position: absolute;
-    bottom: 0px;
     width: 100%;
 }
 
-#prophesise, button, #note {
-    cursor: pointer;
+#prophesise {
+    margin: 17% 0 0;
+}
+
+#noGames, #tryAgain, #resetAll {
+    position: absolute;
+    bottom: 40px;
+}
+
+button {
     margin: 20px 0;
+}
+
+#prophesise, button, #musicNote {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 755px) {
+    #prophesise {
+        margin: 20% 0 0;
+    }
 }

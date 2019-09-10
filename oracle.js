@@ -97,6 +97,7 @@ function zeldaPlay() {
 const totalRevert = () => {
     resetAll.style.display = 'none';
     submittedBody.style.display = 'none';
+    tryAgain.style.display = 'none';
     noGames.style.display = 'none';
     defaultBody.style.display = 'block';
     prophesise.style.display = 'block';
